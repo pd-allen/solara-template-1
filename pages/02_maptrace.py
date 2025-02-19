@@ -29,7 +29,7 @@ class Map(leafmap.Map):
 
         data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
         self.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
-        #self.add_layer_control()
+        self.add_layer_control()
         self.add_basemap("OpenTopoMap")
         
 #print(data)
